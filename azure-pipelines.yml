@@ -47,9 +47,9 @@ steps:
       mv ./aws-iam-authenticator /usr/bin/aws-iam-authenticator
       chmod +x /usr/bin/aws-iam-authenticator
       
-      aws configure set aws_access_key_id 677758985713
+      aws configure set aws_access_key_id XXXXXXXX
       aws sts get-caller-identity
-      aws eks --region us-east-2 update-kubeconfig --name eks-test
+      aws eks --region RRRRRR update-kubeconfig --name XXXXXX
       
       kubectl delete namespace eks-sample-app
       kubectl create namespace eks-sample-app
@@ -84,7 +84,7 @@ steps:
                       - arm64
             containers:
             - name: nginx
-              image: 677758985713.dkr.ecr.us-east-2.amazonaws.com/niby:latest
+              image: XXXXXXXXXX.dkr.ecr.XXXXX.amazonaws.com/XXXXXX:latest
               ports:
               - name: http
                 containerPort: 80
